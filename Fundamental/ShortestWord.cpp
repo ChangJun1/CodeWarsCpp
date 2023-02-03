@@ -7,7 +7,7 @@ String will never be empty and you do not need to account for different data typ
 
 using namespace std;
 
-int find_short(std::string str) {
+/*int find_short(std::string str) {
     int res = 0;
     int n = str.size();
     int i = 0;
@@ -23,8 +23,23 @@ int find_short(std::string str) {
         i++;
     }
     return res;
-}
+}*/
 
+
+// best solution
+
+int find_short(const std::string &str) {
+    std::istringstream inp(str);
+    std::string s;
+    int len = -1;
+    while (std::getline(inp, s, ' ')) {
+        // s.length()的类型为std::string::size_type，即unsigned int，当unsigned int与int进行比较时，统一转换成unsigned int，因此-1是最大的值
+        if (s.length() < len) {
+            len = s.length();
+        }
+    }
+    return len;
+}
 
 TEST(TEST, find_short) {
     ASSERT_EQ(find_short("bitcoin take over the world maybe who knows perhaps"), 3);
