@@ -15,6 +15,7 @@ add_executable(HowMuchILoveYou Fundamental/HowMuchILoveYou.cpp)
 add_executable(FindNextSquare Fundamental/FindNextSquare.cpp)
 add_executable(ToAlternatingCase Fundamental/ToAlternatingCase.cpp)
 add_executable(NthPower Fundamental/NthPower.cpp)
+add_executable(Isograms Fundamental/Isograms.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -32,6 +33,8 @@ target_link_libraries(ToAlternatingCase ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(ToAlternatingCase  ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(NthPower ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(NthPower  ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(Isograms ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(Isograms  ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -41,8 +44,10 @@ add_test(HowMuchILoveYouTest HowMuchILoveYou)
 add_test(FindNextSquareTest FindNextSquare)
 add_test(ToAlternatingCaseTest ToAlternatingCase)
 add_test(NthPowerTest NthPower)
+add_test(IsogramsTest Isograms)
 
 
 enable_testing()
+
 
 
