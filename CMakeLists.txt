@@ -18,6 +18,7 @@ add_executable(NthPower Fundamental/NthPower.cpp)
 add_executable(Isograms Fundamental/Isograms.cpp)
 add_executable(number Fundamental/number.cpp)
 add_executable(isPalindrom Fundamental/isPalindrom.cpp)
+add_executable(Sum_of_a_sequence Fundamental/Sum_of_a_sequence.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -41,6 +42,8 @@ target_link_libraries(number ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(number  ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(isPalindrom ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(isPalindrom  ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(Sum_of_a_sequence ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(Sum_of_a_sequence ${CMAKE_THREAD_LIBS_INIT})
 
 
 add_test(Test MyTests)
@@ -54,6 +57,8 @@ add_test(NthPowerTest NthPower)
 add_test(IsogramsTest Isograms)
 add_test(numberTest number)
 add_test(isPalindromTest isPalindrom)
+add_test(Sum_of_a_sequenceTest Sum_of_a_sequence)
 
 
 enable_testing()
+
