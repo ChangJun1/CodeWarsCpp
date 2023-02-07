@@ -21,6 +21,7 @@ add_executable(isPalindrom Fundamental/isPalindrom.cpp)
 add_executable(Sum_of_a_sequence Fundamental/Sum_of_a_sequence.cpp)
 add_executable(Remove_anchor_from_URL Fundamental/Remove_anchor_from_URL.cpp)
 add_executable(Two2One Fundamental/Two2One.cpp)
+add_executable(SumTheStrings Fundamental/SumTheStrings.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -50,6 +51,8 @@ target_link_libraries(Remove_anchor_from_URL ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Remove_anchor_from_URL ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(Two2One ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Two2One ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(SumTheStrings ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(SumTheStrings ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -65,6 +68,8 @@ add_test(isPalindromTest isPalindrom)
 add_test(Sum_of_a_sequenceTest Sum_of_a_sequence)
 add_test(Remove_anchor_from_URLTest Remove_anchor_from_URL)
 add_test(Two2OneTest Two2One)
+add_test(SumTheStringsTest SumTheStrings)
 
 
 enable_testing()
+
