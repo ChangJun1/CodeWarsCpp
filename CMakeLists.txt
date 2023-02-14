@@ -1,7 +1,14 @@
 cmake_minimum_required(VERSION 3.24)
 project(CodeWarsCpp)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11 -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++14 -Wall")
+
+IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    MESSAGE(STATUS "current platform: Windows")
+    set(GTEST_ROOT "D:\\3rd_party\\googletest\\install")
+ELSE ()
+    MESSAGE(STATUS "current platform: ${CMAKE_SYSTEM_NAME}")
+ENDIF ()
 
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)

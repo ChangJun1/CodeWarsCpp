@@ -15,12 +15,30 @@ make
 sudo make install
 ```
 
+Windows下安装过程如下:
+
+1. 安装MinGW，此处使用的是[mingw-builds](https://www.mingw-w64.org/downloads/#mingw-builds)
+
+2. 安装cmake,下载链接[cmake](https://cmake.org/download/)
+
+3. cmake-gui进行编译，注意选择“MinGW MakeFiles”以及native compliers，手动选择编译工具即可
+
+4. 修改CmakeList.txt，Windows下设置`GTEST_ROOT`变量路径，编译时修改至c++14以上
+
 配置CmakeLists.txt
 ```
 cmake_minimum_required (VERSION 2.8)
 project(code-for-blog)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11 -Wall")
-find_package(GTest REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++14 -Wall")
+
+IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    MESSAGE(STATUS "current platform: Windows")
+    set(GTEST_ROOT "google_test_install_path")
+ELSE ()
+    MESSAGE(STATUS "current platform: ${CMAKE_SYSTEM_NAME}")
+    find_package(GTest REQUIRED)
+ENDIF ()
+
 find_package(Threads REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 add_executable(MyTests test.cpp)
@@ -157,5 +175,4 @@ virtual void TearDown() override
 };
 ```
 
-以上参考自[使用 Google Test 测试框架](http://senlinzhan.github.io/2017/10/08/gtest/)
-
+以上参考自[使用 Google Test 测试框架](http://senlinzhan.github.io/2017/10/08/gtest/)、[Win10下VScode C++环境配置,Cmake与Gtest的简易使用](https://www.bilibili.com/read/cv17586887)
