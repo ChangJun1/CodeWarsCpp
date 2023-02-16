@@ -29,6 +29,8 @@ add_executable(Sum_of_a_sequence Fundamental/Sum_of_a_sequence.cpp)
 add_executable(Remove_anchor_from_URL Fundamental/Remove_anchor_from_URL.cpp)
 add_executable(Two2One Fundamental/Two2One.cpp)
 add_executable(SumTheStrings Fundamental/SumTheStrings.cpp)
+add_executable(Count_characters_in_your_string Fundamental/Count_characters_in_your_string.cpp)
+add_executable(CalculateBMI "Fundamental/CalculateBMI.cpp")
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -60,6 +62,10 @@ target_link_libraries(Two2One ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Two2One ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(SumTheStrings ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(SumTheStrings ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(Count_characters_in_your_string ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(Count_characters_in_your_string ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(CalculateBMI ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(CalculateBMI ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -76,7 +82,11 @@ add_test(Sum_of_a_sequenceTest Sum_of_a_sequence)
 add_test(Remove_anchor_from_URLTest Remove_anchor_from_URL)
 add_test(Two2OneTest Two2One)
 add_test(SumTheStringsTest SumTheStrings)
+add_test(Count_characters_in_your_stringTest Count_characters_in_your_string)
+add_test(CalculateBMITest CalculateBMI)
 
 
 enable_testing()
+
+
 
