@@ -34,6 +34,7 @@ add_executable(CalculateBMI "Fundamental/CalculateBMI.cpp")
 add_executable(MexicanWave Fundamental/MexicanWave.cpp)
 add_executable(Mumbling Fundamental/Mumbling.cpp)
 add_executable( Sum_of_the_first_nth_term_of_series "Fundamental/ Sum_of_the_first_nth_term_of_series.cpp")
+add_executable(EqualSidesOfAnArray Fundamental/EqualSidesOfAnArray.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -75,6 +76,8 @@ target_link_libraries(Mumbling ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Mumbling ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(Sum_of_the_first_nth_term_of_series ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Sum_of_the_first_nth_term_of_series ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(EqualSidesOfAnArray ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(EqualSidesOfAnArray ${CMAKE_THREAD_LIBS_INIT})
 
 
 add_test(Test MyTests)
@@ -97,7 +100,7 @@ add_test(CalculateBMITest CalculateBMI)
 add_test(MexicanWaveTest MexicanWave)
 add_test(MumblingTest Mumbling)
 add_test(Sum_of_the_first_nth_term_of_seriesTest Sum_of_the_first_nth_term_of_series)
+add_test(EqualSidesOfAnArrayTest EqualSidesOfAnArray)
 
 
 enable_testing()
-
