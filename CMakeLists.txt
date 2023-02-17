@@ -33,6 +33,7 @@ add_executable(Count_characters_in_your_string Fundamental/Count_characters_in_y
 add_executable(CalculateBMI "Fundamental/CalculateBMI.cpp")
 add_executable(MexicanWave Fundamental/MexicanWave.cpp)
 add_executable(Mumbling Fundamental/Mumbling.cpp)
+add_executable( Sum_of_the_first_nth_term_of_series "Fundamental/ Sum_of_the_first_nth_term_of_series.cpp")
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -72,6 +73,9 @@ target_link_libraries(MexicanWave ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MexicanWave ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(Mumbling ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Mumbling ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(Sum_of_the_first_nth_term_of_series ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(Sum_of_the_first_nth_term_of_series ${CMAKE_THREAD_LIBS_INIT})
+
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -92,6 +96,8 @@ add_test(Count_characters_in_your_stringTest Count_characters_in_your_string)
 add_test(CalculateBMITest CalculateBMI)
 add_test(MexicanWaveTest MexicanWave)
 add_test(MumblingTest Mumbling)
+add_test(Sum_of_the_first_nth_term_of_seriesTest Sum_of_the_first_nth_term_of_series)
 
 
 enable_testing()
+
