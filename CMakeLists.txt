@@ -4,10 +4,10 @@ project(CodeWarsCpp)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++14 -Wall")
 
 IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
-    MESSAGE(STATUS "current platform: Windows")
-    set(GTEST_ROOT "D:\\3rd_party\\googletest\\install")
+   MESSAGE(STATUS "current platform: Windows")
+   set(GTEST_ROOT "D:\\3rd_party\\googletest\\install")
 ELSE ()
-    MESSAGE(STATUS "current platform: ${CMAKE_SYSTEM_NAME}")
+   MESSAGE(STATUS "current platform: ${CMAKE_SYSTEM_NAME}")
 ENDIF ()
 
 find_package(GTest REQUIRED)
@@ -31,6 +31,7 @@ add_executable(Two2One Fundamental/Two2One.cpp)
 add_executable(SumTheStrings Fundamental/SumTheStrings.cpp)
 add_executable(Count_characters_in_your_string Fundamental/Count_characters_in_your_string.cpp)
 add_executable(CalculateBMI "Fundamental/CalculateBMI.cpp")
+add_executable(MexicanWave Fundamental/MexicanWave.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -66,6 +67,8 @@ target_link_libraries(Count_characters_in_your_string ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(Count_characters_in_your_string ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(CalculateBMI ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(CalculateBMI ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(MexicanWave ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(MexicanWave ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -84,9 +87,7 @@ add_test(Two2OneTest Two2One)
 add_test(SumTheStringsTest SumTheStrings)
 add_test(Count_characters_in_your_stringTest Count_characters_in_your_string)
 add_test(CalculateBMITest CalculateBMI)
+add_test(MexicanWaveTest MexicanWave)
 
 
 enable_testing()
-
-
-
