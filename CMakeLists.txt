@@ -36,6 +36,7 @@ add_executable(Mumbling Fundamental/Mumbling.cpp)
 add_executable( Sum_of_the_first_nth_term_of_series "Fundamental/ Sum_of_the_first_nth_term_of_series.cpp")
 add_executable(EqualSidesOfAnArray Fundamental/EqualSidesOfAnArray.cpp)
 add_executable(HighestScoringWord Fundamental/HighestScoringWord.cpp)
+add_executable(AnagramDetection Fundamental/AnagramDetection.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
@@ -81,6 +82,8 @@ target_link_libraries(EqualSidesOfAnArray ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(EqualSidesOfAnArray ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(HighestScoringWord ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(HighestScoringWord ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(AnagramDetection ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(AnagramDetection ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -104,7 +107,9 @@ add_test(MumblingTest Mumbling)
 add_test(Sum_of_the_first_nth_term_of_seriesTest Sum_of_the_first_nth_term_of_series)
 add_test(EqualSidesOfAnArrayTest EqualSidesOfAnArray)
 add_test(HighestScoringWordTest HighestScoringWord)
+add_test(AnagramDetectionTest AnagramDetection)
 
 
 enable_testing()
+
 
