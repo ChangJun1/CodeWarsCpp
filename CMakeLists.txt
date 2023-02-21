@@ -38,6 +38,7 @@ add_executable(EqualSidesOfAnArray Fundamental/EqualSidesOfAnArray.cpp)
 add_executable(HighestScoringWord Fundamental/HighestScoringWord.cpp)
 add_executable(AnagramDetection Fundamental/AnagramDetection.cpp)
 add_executable(DuplicateEncoder Fundamental/DuplicateEncoder.cpp)
+add_executable(ReplaceWithAlphabetPosition Fundamental/ReplaceWithAlphabetPosition.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(digitize ${GTEST_BOTH_LIBRARIES})
@@ -63,6 +64,7 @@ target_link_libraries(EqualSidesOfAnArray ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(HighestScoringWord ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(AnagramDetection ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(DuplicateEncoder ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(ReplaceWithAlphabetPosition ${GTEST_BOTH_LIBRARIES})
 
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(digitize ${CMAKE_THREAD_LIBS_INIT})
@@ -88,6 +90,7 @@ target_link_libraries(EqualSidesOfAnArray ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(HighestScoringWord ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(AnagramDetection ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(DuplicateEncoder ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(ReplaceWithAlphabetPosition ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -113,9 +116,7 @@ add_test(EqualSidesOfAnArrayTest EqualSidesOfAnArray)
 add_test(HighestScoringWordTest HighestScoringWord)
 add_test(AnagramDetectionTest AnagramDetection)
 add_test(DuplicateEncoderTest DuplicateEncoder)
+add_test(ReplaceWithAlphabetPositionTest ReplaceWithAlphabetPosition)
 
 
 enable_testing()
-
-
-
