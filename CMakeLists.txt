@@ -42,6 +42,7 @@ add_executable(ReplaceWithAlphabetPosition Fundamental/ReplaceWithAlphabetPositi
 add_executable(RangeExtraction RankUP/RangeExtraction.cpp)
 add_executable(FindTheOddInt Fundamental/FindTheOddInt.cpp)
 add_executable(HelpTheBookSeller "Fundamental/HelpTheBookSeller.cpp")
+add_executable(BinaryAddition Fundamental/BinaryAddition.cpp)
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(digitize ${GTEST_BOTH_LIBRARIES})
@@ -71,6 +72,7 @@ target_link_libraries(ReplaceWithAlphabetPosition ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(RangeExtraction ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(FindTheOddInt ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(HelpTheBookSeller ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(BinaryAddition ${GTEST_BOTH_LIBRARIES})
 
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(digitize ${CMAKE_THREAD_LIBS_INIT})
@@ -99,7 +101,8 @@ target_link_libraries(DuplicateEncoder ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(ReplaceWithAlphabetPosition ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(RangeExtraction ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(FindTheOddInt ${CMAKE_THREAD_LIBS_INIT})
-target_link_libraries(HelpTheBookSeller${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(HelpTheBookSeller ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(BinaryAddition ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -129,6 +132,6 @@ add_test(ReplaceWithAlphabetPositionTest ReplaceWithAlphabetPosition)
 add_test(RangeExtractionTest RangeExtraction)
 add_test(FindTheOddIntTest FindTheOddInt)
 add_test(HelpTheBookSellerTest HelpTheBookSeller)
-
+add_test(BinaryAdditionTest BinaryAddition)
 
 enable_testing()
