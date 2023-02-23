@@ -47,6 +47,7 @@ add_executable(SimpleEncryption1AlternatingSplit Fundamental/SimpleEncryption1Al
 add_executable(ReverseWords Fundamental/ReverseWords.cpp)
 add_executable(PrimesInNumbers Fundamental/PrimesInNumbers.cpp)
 add_executable(AlternateCapitalization Fundamental/AlternateCapitalization.cpp)
+add_executable(TortoiseRacing Fundamental/TortoiseRacing.cpp)
 
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
@@ -82,6 +83,7 @@ target_link_libraries(SimpleEncryption1AlternatingSplit ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(ReverseWords ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(PrimesInNumbers ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(AlternateCapitalization ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(TortoiseRacing ${GTEST_BOTH_LIBRARIES})
 
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(digitize ${CMAKE_THREAD_LIBS_INIT})
@@ -116,6 +118,7 @@ target_link_libraries(SimpleEncryption1AlternatingSplit ${CMAKE_THREAD_LIBS_INIT
 target_link_libraries(ReverseWords ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(PrimesInNumbers ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(AlternateCapitalization ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(TortoiseRacing ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -150,5 +153,6 @@ add_test(SimpleEncryption1AlternatingSplitTest SimpleEncryption1AlternatingSplit
 add_test(ReverseWordsTest ReverseWords)
 add_test(PrimesInNumbersTest PrimesInNumbers)
 add_test(AlternateCapitalizationTest AlternateCapitalization)
+add_test(TortoiseRacingTest TortoiseRacing)
 
 enable_testing()
