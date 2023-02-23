@@ -45,6 +45,7 @@ add_executable(HelpTheBookSeller "Fundamental/HelpTheBookSeller.cpp")
 add_executable(BinaryAddition Fundamental/BinaryAddition.cpp)
 add_executable(SimpleEncryption1AlternatingSplit Fundamental/SimpleEncryption1AlternatingSplit.cpp)
 add_executable(ReverseWords Fundamental/ReverseWords.cpp)
+add_executable(PrimesInNumbers Fundamental/PrimesInNumbers.cpp)
 
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
@@ -78,6 +79,7 @@ target_link_libraries(HelpTheBookSeller ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(BinaryAddition ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(SimpleEncryption1AlternatingSplit ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(ReverseWords ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(PrimesInNumbers ${GTEST_BOTH_LIBRARIES})
 
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(digitize ${CMAKE_THREAD_LIBS_INIT})
@@ -110,6 +112,7 @@ target_link_libraries(HelpTheBookSeller ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(BinaryAddition ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(SimpleEncryption1AlternatingSplit ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(ReverseWords ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(PrimesInNumbers ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -142,5 +145,7 @@ add_test(HelpTheBookSellerTest HelpTheBookSeller)
 add_test(BinaryAdditionTest BinaryAddition)
 add_test(SimpleEncryption1AlternatingSplitTest SimpleEncryption1AlternatingSplit)
 add_test(ReverseWordsTest ReverseWords)
+add_test(PrimesInNumbersTest PrimesInNumbers)
 
 enable_testing()
+
