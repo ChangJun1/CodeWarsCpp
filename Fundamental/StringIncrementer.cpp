@@ -20,6 +20,7 @@ Attention: If the number has leading zeros the amount of digits should be consid
 
 #include <gtest/gtest.h>
 #include <string>
+#include <unordered_map>
 
 std::string incrementString(const std::string &str) {
     if (str.empty()) {
