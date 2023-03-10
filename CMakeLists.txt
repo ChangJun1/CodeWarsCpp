@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.24)
 project(CodeWarsCpp)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++14 -Wall")
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++20 -Wall")
 
 IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
    MESSAGE(STATUS "current platform: Windows")
@@ -58,6 +59,7 @@ add_executable(HammingNumbers RankUP/HammingNumbers.cpp)
 add_executable(BuildTower Fundamental/BuildTower.cpp)
 add_executable(RowWeights Fundamental/RowWeights.cpp)
 add_executable(TheobservedPIN RankUP/TheobservedPIN.cpp)
+add_executable(SmallestPossibleSum RankUP/SmallestPossibleSum.cpp)
 
 
 target_link_libraries(MyTests ${GTEST_BOTH_LIBRARIES})
@@ -104,6 +106,7 @@ target_link_libraries(HammingNumbers ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(BuildTower ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(RowWeights ${GTEST_BOTH_LIBRARIES})
 target_link_libraries(TheobservedPIN ${GTEST_BOTH_LIBRARIES})
+target_link_libraries(SmallestPossibleSum ${GTEST_BOTH_LIBRARIES})
 
 target_link_libraries(MyTests ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(digitize ${CMAKE_THREAD_LIBS_INIT})
@@ -149,6 +152,7 @@ target_link_libraries(HammingNumbers ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(BuildTower ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(RowWeights ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(TheobservedPIN ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(SmallestPossibleSum ${CMAKE_THREAD_LIBS_INIT})
 
 add_test(Test MyTests)
 add_test(DigitizeTest digitize)
@@ -194,5 +198,6 @@ add_test(HammingNumbersTest HammingNumbers)
 add_test(BuildTowersTest BuildTower)
 add_test(RowWeightsTest RowWeights)
 add_test(TheobservedPINTest TheobservedPIN)
+add_test(SmallestPossibleSumTest SmallestPossibleSum)
 
 enable_testing()
